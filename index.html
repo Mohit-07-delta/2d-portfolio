@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- SEO Optimization -->
+    <title>John Doe | Playable 2D Developer Portfolio</title>
+    <meta name="description" content="Explore John Doe's projects, skills, education, and experience in an interactive 2D pixel-art game format built using Vite & KAPLAY (Kaboom.js)." />
+    
+    <!-- Main Stylesheet -->
+    <script type="module" crossorigin src="./assets/index-U9n46CI0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C7qvoYd_.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- KAPLAY Canvas -->
+      <canvas id="game" tabindex="0"></canvas>
+
+      <!-- Audio Control Widget HUD -->
+      <div class="audio-hud-container">
+        <button id="mute-bgm-btn" class="hud-btn" aria-label="Toggle background music">🎵 BGM</button>
+        <button id="mute-sfx-btn" class="hud-btn" aria-label="Toggle sound effects">🔊 SFX</button>
+      </div>
+
+      <!-- Interaction Overlay prompt -->
+      <div id="interaction-prompt" class="interaction-prompt">
+        Press <span class="key-cap">[E]</span> to interact
+      </div>
+
+      <!-- Mobile virtual joystick controls -->
+      <div id="joystick-container">
+        <div id="joystick-handle"></div>
+      </div>
+
+      <!-- Mobile action interact button -->
+      <button id="mobile-interact-btn">INTERACT</button>
+
+      <!-- Achievement Unlocked Notification Popup -->
+      <div id="achievement-popup" class="achievement-popup">
+        <span class="achievement-icon">🏆</span>
+        <div class="achievement-details">
+          <div class="achievement-title">ACHIEVEMENT UNLOCKED</div>
+          <div class="achievement-desc">Wiki Explorer (Inspected 5 objects)</div>
+        </div>
+      </div>
+
+      <!-- Dynamic Modal Dialog overlay -->
+      <div id="modal-overlay">
+        <div class="modal-container" role="dialog" aria-modal="true">
+          <div class="modal-header">
+            <button id="modal-close-btn" class="modal-close" aria-label="Close modal">✕</button>
+          </div>
+          <div class="modal-body" id="modal-body-content">
+            <!-- Injected by src/modal.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Retro Loading Screen with progress bar -->
+      <div id="loading-screen">
+        <div class="loader-container">
+          <div class="loader-title">LOADING WORLD...</div>
+          <div class="loader-bar-bg">
+            <div class="loader-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Game Script -->
+  </body>
+</html>

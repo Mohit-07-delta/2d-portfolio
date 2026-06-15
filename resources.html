@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Resources | Wiki Club SATI</title>
+  <meta name="description" content="Access learning guides, tutorials, sandboxes, and developer documentation for Wikipedia, Wikidata, and Wikimedia Commons.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="resources-page">
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <!-- Wiki Logo Mark - Dot Cloud Logo representing Wiki Club SATI -->
+        <img id="navbar-logo" src="logo.svg" alt="Wiki Club SATI Logo" class="brand-logo" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-title">Wiki Club SATI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="members.html" class="nav-link">Members</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="resources.html" class="nav-link active">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-join-trigger">Join Community</button>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="members.html" class="mobile-nav-link">Members</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="resources.html" class="mobile-nav-link active">Resources</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="#join-section" class="mobile-nav-link btn-join-trigger">Join Community</a>
+    </nav>
+  </div>
+
+  <main class="resources-page-main">
+    <!-- Resources List Section -->
+    <section class="resources-list-section" id="resources-list">
+      <div class="container">
+        <div class="resources-list-header fade-in-up">
+          <span class="resources-list-badge">GUIDES</span>
+          <h1 class="resources-list-title">Learning Resources</h1>
+          <p class="resources-list-subtitle">Self-paced tutorials, cheat sheets, sandboxes, and scripts to guide you through the Wikimedia ecosystem.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar fade-in-up">
+          <div class="search-box">
+            <span class="search-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" id="resource-search" placeholder="Search guides by name, description or platform...">
+          </div>
+          <div class="filter-pills">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="wikipedia">Wikipedia</button>
+            <button class="filter-pill" data-filter="commons">Commons</button>
+            <button class="filter-pill" data-filter="wikidata">Wikidata</button>
+            <button class="filter-pill" data-filter="developer">Developer Tools</button>
+          </div>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="resources-grid fade-in-up" id="resources-grid" style="margin-top: 3rem;">
+          
+          <!-- Wikipedia Card 1 -->
+          <div class="resource-card" data-category="wikipedia" data-name="wikipedia editing guide" data-desc="a comprehensive handbook on creating pages, writing articles neutral in point of view, and adding formatting, references, and citations.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="resource-title">Wikipedia Editing Guide</h3>
+            <p class="resource-desc">A comprehensive handbook on creating pages, writing articles neutral in point of view, and adding formatting, references, and citations.</p>
+            <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_Wikipedia" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Read Guide</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Wikipedia Card 2 -->
+          <div class="resource-card" data-category="wikipedia" data-name="wikipedia sandbox tutorial" data-desc="a practice environment where you can experiment with wiki markup syntax, text alignment, and table structures without affecting live articles.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </div>
+            <h3 class="resource-title">Wikipedia Sandbox</h3>
+            <p class="resource-desc">A practice environment where you can experiment with wiki markup syntax, text alignment, and table structures without affecting live articles.</p>
+            <a href="https://en.wikipedia.org/wiki/Wikipedia:Sandbox" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Open Sandbox</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Wikipedia Card 3 -->
+          <div class="resource-card" data-category="wikipedia" data-name="visualeditor user guide" data-desc="learn how to use the rich, wysiwyg visualeditor interface on wikipedia to edit layout, tables, and images without markup coding.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="resource-title">VisualEditor Guide</h3>
+            <p class="resource-desc">Learn how to use the rich, WYSIWYG VisualEditor interface on Wikipedia to edit layout, tables, and images without markup coding.</p>
+            <a href="https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>View Guide</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Commons Card 1 -->
+          <div class="resource-card" data-category="commons" data-name="wikimedia commons uploads first steps" data-desc="guidelines for uploading high-quality images, illustrations, and audio files. learn about categorizing and creative commons tags.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="resource-title">Wikimedia Commons Uploads</h3>
+            <p class="resource-desc">Guidelines for uploading high-quality images, illustrations, and audio files. Learn about categorizing and Creative Commons tags.</p>
+            <a href="https://commons.wikimedia.org/wiki/Commons:First_steps" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Commons Card 2 -->
+          <div class="resource-card" data-category="commons" data-name="creative commons licensing guide" data-desc="understand various CC licenses, attribution rights, fair use, and how to license your own photographs or drawings for free use.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M14.83 9.17a4 4 0 1 0 0 5.66"></path>
+              </svg>
+            </div>
+            <h3 class="resource-title">CC Licensing Guide</h3>
+            <p class="resource-desc">Understand various CC licenses, attribution rights, fair use, and how to license your own photographs or drawings for free use.</p>
+            <a href="https://creativecommons.org/share-your-work/" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Read Licensing</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Wikidata Card 1 -->
+          <div class="resource-card" data-category="wikidata" data-name="introduction to wikidata semantic data" data-desc="explore the structured semantic web database. learn how items, properties, qualifiers, and statements structure data globally.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="resource-title">Introduction to Wikidata</h3>
+            <p class="resource-desc">Explore the structured semantic web database. Learn how items, properties, qualifiers, and statements structure data globally.</p>
+            <a href="https://www.wikidata.org/wiki/Wikidata:Introduction" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>View Tutorial</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Wikidata Card 2 -->
+          <div class="resource-card" data-category="wikidata" data-name="wikidata sparql query tutorial training" data-desc="learn to query database elements using SPARQL query syntax. query and build visual lists, bubbles, and custom maps instantly.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 class="resource-title">SPARQL Query Training</h3>
+            <p class="resource-desc">Learn to query database elements using SPARQL query syntax. Query and build visual lists, bubbles, and custom maps instantly.</p>
+            <a href="https://query.wikidata.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>SPARQL Query Portal</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Developer Card 1 -->
+          <div class="resource-card" data-category="developer" data-name="pywikibot framework python automated edits" data-desc="automate mediawiki contributions. learn how to configure and run python-based pywikibot scripts for massive data updates.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="resource-title">Pywikibot Framework</h3>
+            <p class="resource-desc">Automate MediaWiki contributions. Learn how to configure and run Python-based Pywikibot scripts for massive data updates.</p>
+            <a href="https://www.mediawiki.org/wiki/Manual:Pywikibot" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Read Manual</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Developer Card 2 -->
+          <div class="resource-card" data-category="developer" data-name="mediawiki web api sandbox query backend endpoints" data-desc="interact directly with mediawiki APIs. query, log, edit, and update metadata using rest/action APIs through standard json formats.">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="resource-title">MediaWiki API Sandbox</h3>
+            <p class="resource-desc">Interact directly with MediaWiki APIs. Query, log, edit, and update metadata using REST/Action APIs through standard JSON formats.</p>
+            <a href="https://en.wikipedia.org/wiki/Special:ApiSandbox" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>API Sandbox</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Community CTA Section -->
+    <section class="join-section" id="join-section">
+      <div class="container">
+        <div class="join-banner-blue fade-in-up">
+          <div class="join-content">
+            <h2 class="join-title-white">Ready to edit history?</h2>
+            <p class="join-text-white">Whether you want to write articles, upload photographs of local culture, code semantic queries, or help with event design—there's a place for you in our community!</p>
+            <div class="join-buttons">
+              <button class="btn btn-white btn-join-trigger">Become a Member</button>
+              <a href="https://meta.wikimedia.org/wiki/Wiki_Club_SATI" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Meta-Wiki Page</a>
+            </div>
+          </div>
+          <div class="join-illustration">
+            <!-- Thin Central Plus-Sign Orbit Graphic -->
+            <svg class="illustration-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Central thin plus sign (stationary) -->
+              <line x1="88" y1="100" x2="112" y2="100" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="100" y1="88" x2="100" y2="112" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              
+              <!-- Orbit circles and nodes (rotating) -->
+              <g class="spin-slow">
+                <!-- Inner dashed orbit -->
+                <circle cx="100" cy="100" r="45" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="5 5" />
+                <!-- Outer solid orbit -->
+                <circle cx="100" cy="100" r="65" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                
+                <!-- Orbiting Nodes -->
+                <!-- Top-Left node on dashed circle -->
+                <circle cx="68" cy="68" r="11" fill="#FFFFFF" fill-opacity="0.95" />
+                <!-- Bottom-Right node on dashed circle -->
+                <circle cx="132" cy="132" r="9" fill="#FFFFFF" fill-opacity="0.5" />
+                <!-- Left node on solid outer circle -->
+                <circle cx="35" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.7" />
+                <!-- Right node on solid outer circle -->
+                <circle cx="165" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-wiki-dark">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="index.html" class="footer-logo">
+          <!-- Blue Square Logo Mark as in the screenshot -->
+          <img id="footer-logo" src="logo-dark.svg" alt="Wiki Club SATI Logo" class="footer-logo-img" width="36" height="36" style="flex-shrink:0;">
+          <span style="margin-left: 10px;">Wiki Club SATI</span>
+        </a>
+        <p class="footer-desc">A student-led Wikimedia community at Samrat Ashok Technological Institute, Vidisha — dedicated to open knowledge, digital literacy, and free culture.</p>
+        <div class="footer-socials">
+          <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wiki-club-sat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Movement</h4>
+        <ul class="footer-links">
+          <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+          <li><a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
+          <li><a href="https://wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a></li>
+          <li><a href="https://meta.wikimedia.org" target="_blank" rel="noopener noreferrer">Meta-Wiki</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Wiki Club SATI, Vidisha. Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA 4.0</a>.</p>
+      <p>Built with passion for open knowledge.</p>
+    </div>
+  </footer>
+
+  <!-- Join Community Modal -->
+  <div class="modal-overlay" id="join-modal">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Join Wiki Club SATI</h3>
+        <p class="modal-subtitle">Register your interest to get invitations to our workshops, editing drives, and group communications.</p>
+      </div>
+      <div class="modal-body">
+        <form id="join-form">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" required placeholder="e.g. Aman Sharma">
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input type="email" id="student-email" required placeholder="e.g. student@satiengg.in">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-branch">Branch / Department</label>
+              <select id="student-branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CE">Civil Engineering</option>
+                <option value="EI">Electronics & Instrumentation</option>
+                <option value="other">Other / Applied Sciences</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="student-year">Year of Study</label>
+              <select id="student-year" required>
+                <option value="" disabled selected>Select year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Areas of Interest (Select multiple)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikipedia"> Wikipedia Editing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="commons"> Wikimedia Commons
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikidata"> Wikidata & Semantic Web
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="tech"> Tool Dev & Scripts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="outreach"> Outreach & Socials
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+
+        <!-- Success Message (hidden initially) -->
+        <div class="success-message" id="success-message" style="display: none;">
+          <div class="success-icon-wrap">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Application Received!</h4>
+          <p>Thank you for showing interest in Wiki Club SATI. To get connected immediately with our team and receive updates, please join our official communication channels:</p>
+          <div class="social-join-cards">
+            <a href="#" class="social-join-card whatsapp">
+               <span class="social-join-title">Join WhatsApp Group</span>
+               <span class="social-join-desc">Direct communications & links</span>
+            </a>
+            <a href="#" class="social-join-card discord">
+               <span class="social-join-title">Join Discord Server</span>
+               <span class="social-join-desc">Collaborative channels & coding chat</span>
+            </a>
+          </div>
+          <button class="btn btn-secondary btn-block" id="success-close">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script src="script.js"></script>
+</body>
+</html>

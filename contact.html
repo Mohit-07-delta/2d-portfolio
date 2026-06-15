@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Wiki Club SATI</title>
+  <meta name="description" content="Get in touch with Wiki Club SATI. Send us a message, find our campus address, or read answers to frequently asked questions.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-page">
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <!-- Wiki Logo Mark - Dot Cloud Logo representing Wiki Club SATI -->
+        <img id="navbar-logo" src="logo.svg" alt="Wiki Club SATI Logo" class="brand-logo" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-title">Wiki Club SATI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="members.html" class="nav-link">Members</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-join-trigger">Join Community</button>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="members.html" class="mobile-nav-link">Members</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="resources.html" class="mobile-nav-link">Resources</a>
+      <a href="contact.html" class="mobile-nav-link active">Contact</a>
+      <a href="#join-section" class="mobile-nav-link btn-join-trigger">Join Community</a>
+    </nav>
+  </div>
+
+  <main class="contact-page-main">
+    <!-- Contact Info & Form Section -->
+    <section class="contact-details-section">
+      <div class="container">
+        <div class="contact-list-header fade-in-up">
+          <span class="contact-list-badge">SUPPORT</span>
+          <h1 class="contact-list-title">Get in Touch</h1>
+          <p class="contact-list-subtitle">Have questions about our events, edit-a-thons, or technical projects? We are here to help.</p>
+        </div>
+
+        <div class="contact-grid" style="margin-top: 3rem;">
+          <!-- Left side: Contact Info Cards -->
+          <div class="contact-info-card fade-in-up">
+            <h2 class="contact-info-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Contact Information</h2>
+            <p class="contact-info-text" style="margin-bottom: 2rem;">Reach out to our leadership team or faculty coordinator directly, or follow our official social channels for announcements.</p>
+            
+            <div class="contact-methods">
+              <!-- Email method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Email Address</span>
+                  <a href="mailto:wikiclubsati@gmail.com" class="contact-method-value">wikiclubsati@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Instagram method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Instagram</span>
+                  <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" class="contact-method-value">@wikiclubsati</a>
+                </div>
+              </div>
+
+              <!-- Twitter method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Twitter / X</span>
+                  <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" class="contact-method-value">@wikiclubsati</a>
+                </div>
+              </div>
+
+              <!-- Location method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Campus Address</span>
+                  <span class="contact-method-value" style="color: var(--color-text-muted);">Samrat Ashok Technological Institute (SATI), Civil Lines, Vidisha, MP, 464001, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Message Form -->
+          <div class="contact-form-card fade-in-up delay-1">
+            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-text);">Send us a Message</h2>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" required placeholder="Your email address">
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" required placeholder="What is this regarding?">
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="5" required placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" style="padding: 80px 0; background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header fade-in-up" style="margin-bottom: 3rem;">
+          <span class="about-badge-label">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Got questions? We've got answers.</p>
+        </div>
+
+        <div class="faq-accordion-container fade-in-up">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Who can join Wiki Club SATI?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Any student of Samrat Ashok Technological Institute (SATI), Vidisha, or interested volunteers in the region are welcome to join. You don't need any special background — just an interest in sharing open knowledge!</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I need programming or tech skills?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Not at all! Wikipedia needs editors who can write, translate, research, and proofread. Wikimedia Commons needs photographers and illustrators. However, if you do have tech skills (Python, JS, SPARQL, API development), we also build automated tools, bots, and structured query dashboards.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is there any registration fee?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Wiki Club SATI is a student community sponsored by volunteers and the open knowledge movement. Joining the club and attending our workshops, edit-a-thons, and events is completely free.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How often does the club meet?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>We typically organize bi-weekly editing circles, hands-on training workshops twice a month, and larger collaborative edit-a-thons or photography walks once a quarter. Keep an eye on our events calendar page for updates!</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How can other organizations collaborate with the club?</span>
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>We welcome collaborations with other college chapters, FOSS groups, local libraries, and historical societies. Please email us at wikiclubsati@gmail.com or fill out the contact form above to discuss potential projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Community CTA Section -->
+    <section class="join-section" id="join-section" style="border-top: none;">
+      <div class="container">
+        <div class="join-banner-blue fade-in-up">
+          <div class="join-content">
+            <h2 class="join-title-white">Ready to edit history?</h2>
+            <p class="join-text-white">Whether you want to write articles, upload photographs of local culture, code semantic queries, or help with event design—there's a place for you in our community!</p>
+            <div class="join-buttons">
+              <button class="btn btn-white btn-join-trigger">Become a Member</button>
+              <a href="https://meta.wikimedia.org/wiki/Wiki_Club_SATI" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Meta-Wiki Page</a>
+            </div>
+          </div>
+          <div class="join-illustration">
+            <!-- Thin Central Plus-Sign Orbit Graphic -->
+            <svg class="illustration-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Central thin plus sign (stationary) -->
+              <line x1="88" y1="100" x2="112" y2="100" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="100" y1="88" x2="100" y2="112" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              
+              <!-- Orbit circles and nodes (rotating) -->
+              <g class="spin-slow">
+                <!-- Inner dashed orbit -->
+                <circle cx="100" cy="100" r="45" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="5 5" />
+                <!-- Outer solid orbit -->
+                <circle cx="100" cy="100" r="65" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                
+                <!-- Orbiting Nodes -->
+                <!-- Top-Left node on dashed circle -->
+                <circle cx="68" cy="68" r="11" fill="#FFFFFF" fill-opacity="0.95" />
+                <!-- Bottom-Right node on dashed circle -->
+                <circle cx="132" cy="132" r="9" fill="#FFFFFF" fill-opacity="0.5" />
+                <!-- Left node on solid outer circle -->
+                <circle cx="35" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.7" />
+                <!-- Right node on solid outer circle -->
+                <circle cx="165" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-wiki-dark">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="index.html" class="footer-logo">
+          <!-- Blue Square Logo Mark as in the screenshot -->
+          <img id="footer-logo" src="logo-dark.svg" alt="Wiki Club SATI Logo" class="footer-logo-img" width="36" height="36" style="flex-shrink:0;">
+          <span style="margin-left: 10px;">Wiki Club SATI</span>
+        </a>
+        <p class="footer-desc">A student-led Wikimedia community at Samrat Ashok Technological Institute, Vidisha — dedicated to open knowledge, digital literacy, and free culture.</p>
+        <div class="footer-socials">
+          <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wiki-club-sat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Movement</h4>
+        <ul class="footer-links">
+          <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+          <li><a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
+          <li><a href="https://wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a></li>
+          <li><a href="https://meta.wikimedia.org" target="_blank" rel="noopener noreferrer">Meta-Wiki</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Wiki Club SATI, Vidisha. Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA 4.0</a>.</p>
+      <p>Built with passion for open knowledge.</p>
+    </div>
+  </footer>
+
+  <!-- Join Community Modal -->
+  <div class="modal-overlay" id="join-modal">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Join Wiki Club SATI</h3>
+        <p class="modal-subtitle">Register your interest to get invitations to our workshops, editing drives, and group communications.</p>
+      </div>
+      <div class="modal-body">
+        <form id="join-form">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" required placeholder="e.g. Aman Sharma">
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input type="email" id="student-email" required placeholder="e.g. student@satiengg.in">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-branch">Branch / Department</label>
+              <select id="student-branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CE">Civil Engineering</option>
+                <option value="EI">Electronics & Instrumentation</option>
+                <option value="other">Other / Applied Sciences</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="student-year">Year of Study</label>
+              <select id="student-year" required>
+                <option value="" disabled selected>Select year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Areas of Interest (Select multiple)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikipedia"> Wikipedia Editing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="commons"> Wikimedia Commons
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikidata"> Wikidata & Semantic Web
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="tech"> Tool Dev & Scripts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="outreach"> Outreach & Socials
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+
+        <!-- Success Message (hidden initially) -->
+        <div class="success-message" id="success-message" style="display: none;">
+          <div class="success-icon-wrap">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Application Received!</h4>
+          <p>Thank you for showing interest in Wiki Club SATI. To get connected immediately with our team and receive updates, please join our official communication channels:</p>
+          <div class="social-join-cards">
+            <a href="#" class="social-join-card whatsapp">
+               <span class="social-join-title">Join WhatsApp Group</span>
+               <span class="social-join-desc">Direct communications & links</span>
+            </a>
+            <a href="#" class="social-join-card discord">
+               <span class="social-join-title">Join Discord Server</span>
+               <span class="social-join-desc">Collaborative channels & coding chat</span>
+            </a>
+          </div>
+          <button class="btn btn-secondary btn-block" id="success-close">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members | Wiki Club SATI</title>
+  <meta name="description" content="Meet the faculty coordinators, leaders, and core team members of Wiki Club SATI. The people driving open knowledge.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="members-page">
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <!-- Wiki Logo Mark - Dot Cloud Logo representing Wiki Club SATI -->
+        <img id="navbar-logo" src="logo.svg" alt="Wiki Club SATI Logo" class="brand-logo" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-title">Wiki Club SATI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="members.html" class="nav-link active">Members</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-join-trigger">Join Community</button>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="members.html" class="mobile-nav-link active">Members</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="resources.html" class="mobile-nav-link">Resources</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="#join-section" class="mobile-nav-link btn-join-trigger">Join Community</a>
+    </nav>
+  </div>
+
+  <main class="members-page-main">
+    <!-- Contributors Section -->
+    <section class="contributors-section" id="contributors">
+      <div class="container">
+        <div class="contributors-header fade-in-up">
+          <span class="contributors-badge">COMMUNITY</span>
+          <h1 class="contributors-title">Our Contributors</h1>
+          <p class="contributors-subtitle">12 active members editing Wikipedia, uploading to Commons, and curating Wikidata.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar fade-in-up">
+          <div class="search-box">
+            <span class="search-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" id="contributor-search" placeholder="Search by name or Wikimedia username...">
+          </div>
+          <div class="filter-pills">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="coordinator">Coordinator</button>
+            <button class="filter-pill" data-filter="core-team">Core Team</button>
+            <button class="filter-pill" data-filter="editor">Editor</button>
+            <button class="filter-pill" data-filter="photographer">Photographer</button>
+            <button class="filter-pill" data-filter="wikidata-expert">Wikidata Expert</button>
+            <button class="filter-pill" data-filter="member">Member</button>
+          </div>
+        </div>
+
+        <!-- Contributors Grid -->
+        <div class="contributors-grid fade-in-up" id="contributors-grid">
+          <!-- Card 1 -->
+          <div class="contributor-card" data-roles="coordinator,core-team" data-name="shreya dwivedi" data-username="shreya_bhopal">
+            <div class="card-header">
+              <div class="avatar">SD</div>
+              <div class="name-meta">
+                <h3 class="name">Shreya Dwivedi</h3>
+                <span class="username">@Shreya.Bhopal</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">FOUNDER</span>
+              <div class="badge-row">
+                <span class="badge-pill">Founder</span>
+                <span class="badge-pill">Lead Organizer</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">3,120</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Oct 2021</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="contributor-card" data-roles="coordinator,editor" data-name="aditi sharma" data-username="aditi_sati">
+            <div class="card-header">
+              <div class="avatar">AS</div>
+              <div class="name-meta">
+                <h3 class="name">Aditi Sharma</h3>
+                <span class="username">@Aditi_SATI</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">COORDINATOR</span>
+              <div class="badge-row">
+                <span class="badge-pill">Editor of the Month</span>
+                <span class="badge-pill">Admin</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">1,420</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Aug 2022</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="contributor-card" data-roles="wikidata-expert" data-name="rahul verma" data-username="rahul_wikidata">
+            <div class="card-header">
+              <div class="avatar">RV</div>
+              <div class="name-meta">
+                <h3 class="name">Rahul Verma</h3>
+                <span class="username">@Rahul_Wikidata</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">WIKIDATA EXPERT</span>
+              <div class="badge-row">
+                <span class="badge-pill">Wikidata Expert</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">892</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Jan 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="contributor-card" data-roles="core-team,photographer" data-name="aman gupta" data-username="aman_commons">
+            <div class="card-header">
+              <div class="avatar">AG</div>
+              <div class="name-meta">
+                <h3 class="name">Aman Gupta</h3>
+                <span class="username">@Aman_Commons</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">CORE TEAM</span>
+              <div class="badge-row">
+                <span class="badge-pill">Core Team</span>
+                <span class="badge-pill">Moderator</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">2,105</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Oct 2021</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="contributor-card" data-roles="coordinator" data-name="dr. r. k. pandey" data-username="rk_pandey">
+            <div class="card-header">
+              <div class="avatar">DR</div>
+              <div class="name-meta">
+                <h3 class="name">Dr. R. K. Pandey</h3>
+                <span class="username">@RK_Pandey</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">COORDINATOR</span>
+              <div class="badge-row">
+                <span class="badge-pill">Faculty Coordinator</span>
+                <span class="badge-pill">Adviser</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">350</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Jul 2021</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="contributor-card" data-roles="core-team,editor" data-name="priya singh" data-username="priya_sati">
+            <div class="card-header">
+              <div class="avatar">PS</div>
+              <div class="name-meta">
+                <h3 class="name">Priya Singh</h3>
+                <span class="username">@Priya_SATI</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">CORE TEAM</span>
+              <div class="badge-row">
+                <span class="badge-pill">Events Lead</span>
+                <span class="badge-pill">Organizer</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">1,150</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Mar 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="contributor-card" data-roles="photographer" data-name="karan mehta" data-username="karan_commons">
+            <div class="card-header">
+              <div class="avatar">KM</div>
+              <div class="name-meta">
+                <h3 class="name">Karan Mehta</h3>
+                <span class="username">@Karan_Commons</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">PHOTOGRAPHER</span>
+              <div class="badge-row">
+                <span class="badge-pill">Media Lead</span>
+                <span class="badge-pill">Graphics</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">730</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Feb 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="contributor-card" data-roles="editor" data-name="sneha patel" data-username="sneha_wiki">
+            <div class="card-header">
+              <div class="avatar">SP</div>
+              <div class="name-meta">
+                <h3 class="name">Sneha Patel</h3>
+                <span class="username">@Sneha_Wiki</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">EDITOR</span>
+              <div class="badge-row">
+                <span class="badge-pill">Editor</span>
+                <span class="badge-pill">Content Writer</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">620</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Mar 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="contributor-card" data-roles="editor" data-name="vikram singh" data-username="vikram_it">
+            <div class="card-header">
+              <div class="avatar">VS</div>
+              <div class="name-meta">
+                <h3 class="name">Vikram Singh</h3>
+                <span class="username">@Vikram_IT</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">EDITOR</span>
+              <div class="badge-row">
+                <span class="badge-pill">Technical Editor</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">450</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Jun 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="contributor-card" data-roles="photographer" data-name="neha sharma" data-username="neha_commons">
+            <div class="card-header">
+              <div class="avatar">NS</div>
+              <div class="name-meta">
+                <h3 class="name">Neha Sharma</h3>
+                <span class="username">@Neha_Commons</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">PHOTOGRAPHER</span>
+              <div class="badge-row">
+                <span class="badge-pill">Photographer</span>
+                <span class="badge-pill">Commons Contributor</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">310</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Sep 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="contributor-card" data-roles="wikidata-expert" data-name="rohan dixit" data-username="rohan_data">
+            <div class="card-header">
+              <div class="avatar">RD</div>
+              <div class="name-meta">
+                <h3 class="name">Rohan Dixit</h3>
+                <span class="username">@Rohan_Data</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">WIKIDATA EXPERT</span>
+              <div class="badge-row">
+                <span class="badge-pill">Wikidata Editor</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">740</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Nov 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="contributor-card" data-roles="member" data-name="devansh yadav" data-username="devansh_y">
+            <div class="card-header">
+              <div class="avatar">DY</div>
+              <div class="name-meta">
+                <h3 class="name">Devansh Yadav</h3>
+                <span class="username">@Devansh_Y</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="role-label">MEMBER</span>
+              <div class="badge-row">
+                <span class="badge-pill">Active Member</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="meta-col">
+                <span class="meta-label">EDITS</span>
+                <span class="meta-val">180</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">JOINED</span>
+                <span class="meta-val">Feb 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Community CTA Section -->
+    <section class="join-section" id="join-section">
+      <div class="container">
+        <div class="join-banner-blue fade-in-up">
+          <div class="join-content">
+            <h2 class="join-title-white">Ready to edit history?</h2>
+            <p class="join-text-white">Whether you want to write articles, upload photographs of local culture, code semantic queries, or help with event design—there's a place for you in our community!</p>
+            <div class="join-buttons">
+              <button class="btn btn-white btn-join-trigger">Become a Member</button>
+              <a href="https://meta.wikimedia.org/wiki/Wiki_Club_SATI" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Meta-Wiki Page</a>
+            </div>
+          </div>
+          <div class="join-illustration">
+            <!-- Thin Central Plus-Sign Orbit Graphic -->
+            <svg class="illustration-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Central thin plus sign (stationary) -->
+              <line x1="88" y1="100" x2="112" y2="100" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="100" y1="88" x2="100" y2="112" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              
+              <!-- Orbit circles and nodes (rotating) -->
+              <g class="spin-slow">
+                <!-- Inner dashed orbit -->
+                <circle cx="100" cy="100" r="45" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="5 5" />
+                <!-- Outer solid orbit -->
+                <circle cx="100" cy="100" r="65" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                
+                <!-- Orbiting Nodes -->
+                <!-- Top-Left node on dashed circle -->
+                <circle cx="68" cy="68" r="11" fill="#FFFFFF" fill-opacity="0.95" />
+                <!-- Bottom-Right node on dashed circle -->
+                <circle cx="132" cy="132" r="9" fill="#FFFFFF" fill-opacity="0.5" />
+                <!-- Left node on solid outer circle -->
+                <circle cx="35" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.7" />
+                <!-- Right node on solid outer circle -->
+                <circle cx="165" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-wiki-dark">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="index.html" class="footer-logo">
+          <!-- Blue Square Logo Mark as in the screenshot -->
+          <img id="footer-logo" src="logo-dark.svg" alt="Wiki Club SATI Logo" class="footer-logo-img" width="36" height="36" style="flex-shrink:0;">
+          <span style="margin-left: 10px;">Wiki Club SATI</span>
+        </a>
+        <p class="footer-desc">A student-led Wikimedia community at Samrat Ashok Technological Institute, Vidisha — dedicated to open knowledge, digital literacy, and free culture.</p>
+        <div class="footer-socials">
+          <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wiki-club-sat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Movement</h4>
+        <ul class="footer-links">
+          <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+          <li><a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
+          <li><a href="https://wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a></li>
+          <li><a href="https://meta.wikimedia.org" target="_blank" rel="noopener noreferrer">Meta-Wiki</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Wiki Club SATI, Vidisha. Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA 4.0</a>.</p>
+      <p>Built with passion for open knowledge.</p>
+    </div>
+  </footer>
+
+  <!-- Join Community Modal -->
+  <div class="modal-overlay" id="join-modal">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Join Wiki Club SATI</h3>
+        <p class="modal-subtitle">Register your interest to get invitations to our workshops, editing drives, and group communications.</p>
+      </div>
+      <div class="modal-body">
+        <form id="join-form">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" required placeholder="e.g. Aman Sharma">
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input type="email" id="student-email" required placeholder="e.g. student@satiengg.in">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-branch">Branch / Department</label>
+              <select id="student-branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CE">Civil Engineering</option>
+                <option value="EI">Electronics & Instrumentation</option>
+                <option value="other">Other / Applied Sciences</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="student-year">Year of Study</label>
+              <select id="student-year" required>
+                <option value="" disabled selected>Select year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Areas of Interest (Select multiple)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikipedia"> Wikipedia Editing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="commons"> Wikimedia Commons
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikidata"> Wikidata & Semantic Web
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="tech"> Tool Dev & Scripts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="outreach"> Outreach & Socials
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+
+        <!-- Success Message (hidden initially) -->
+        <div class="success-message" id="success-message" style="display: none;">
+          <div class="success-icon-wrap">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Application Received!</h4>
+          <p>Thank you for showing interest in Wiki Club SATI. To get connected immediately with our team and receive updates, please join our official communication channels:</p>
+          <div class="social-join-cards">
+            <a href="#" class="social-join-card whatsapp">
+              <span class="social-join-title">Join WhatsApp Group</span>
+              <span class="social-join-desc">Direct communications & links</span>
+            </a>
+            <a href="#" class="social-join-card discord">
+              <span class="social-join-title">Join Discord Server</span>
+              <span class="social-join-desc">Collaborative channels & coding chat</span>
+            </a>
+          </div>
+          <button class="btn btn-secondary btn-block" id="success-close">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script src="script.js"></script>
+</body>
+</html>

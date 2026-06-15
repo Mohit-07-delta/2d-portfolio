@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Workshops | Wiki Club SATI</title>
+  <meta name="description" content="Discover upcoming workshops, edit-a-thons, meetups, and past events conducted by Wiki Club SATI. Join our open knowledge community.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="events-page">
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <!-- Wiki Logo Mark - Dot Cloud Logo representing Wiki Club SATI -->
+        <img id="navbar-logo" src="logo.svg" alt="Wiki Club SATI Logo" class="brand-logo" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-title">Wiki Club SATI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="members.html" class="nav-link">Members</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-join-trigger">Join Community</button>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="members.html" class="mobile-nav-link">Members</a>
+      <a href="events.html" class="mobile-nav-link active">Events</a>
+      <a href="resources.html" class="mobile-nav-link">Resources</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="#join-section" class="mobile-nav-link btn-join-trigger">Join Community</a>
+    </nav>
+  </div>
+
+  <main class="events-page-main">
+    <!-- Events Section -->
+    <section class="events-list-section" id="events-list">
+      <div class="container">
+        <div class="events-list-header fade-in-up">
+          <span class="events-list-badge">CALENDAR</span>
+          <h1 class="events-list-title">Events & Workshops</h1>
+          <p class="events-list-subtitle">Learn new editing techniques, collaborate on structured data drives, and contribute to open knowledge projects.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar fade-in-up">
+          <div class="search-box">
+            <span class="search-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" id="event-search" placeholder="Search events by name or location...">
+          </div>
+          <div class="filter-pills">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="upcoming">Upcoming</button>
+            <button class="filter-pill" data-filter="workshop">Workshops</button>
+            <button class="filter-pill" data-filter="edit-a-thon">Edit-a-thons</button>
+            <button class="filter-pill" data-filter="meetup">Meetups</button>
+            <button class="filter-pill" data-filter="photo-walk">Photo Walks</button>
+            <button class="filter-pill" data-filter="past">Past Events</button>
+          </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid-three fade-in-up" id="events-grid" style="margin-top: 3rem;">
+          
+          <!-- Upcoming Event 1 -->
+          <div class="event-card-v2" data-type="workshop" data-time="upcoming" data-name="introduction to wikidata" data-location="sati central it lab, block a">
+            <div class="event-v2-body">
+              <div class="event-status-pill upcoming">UPCOMING</div>
+              <span class="event-v2-badge">WORKSHOP</span>
+              <h3 class="event-v2-title">Introduction to Wikidata</h3>
+              <p class="event-v2-desc">Hands-on session on structured semantic data, SPARQL queries, and linking database items to Wikipedia articles.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>12 Jul 2026</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>SATI Central IT Lab, Block A</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Event 2 -->
+          <div class="event-card-v2" data-type="edit-a-thon" data-time="upcoming" data-name="vidisha heritage edit-a-thon" data-location="library conference hall">
+            <div class="event-v2-body">
+              <div class="event-status-pill upcoming">UPCOMING</div>
+              <span class="event-v2-badge">EDIT-A-THON</span>
+              <h3 class="event-v2-title">Vidisha Heritage Edit-a-thon</h3>
+              <p class="event-v2-desc">Improving Wikipedia coverage of monuments, archeology, history, and culture of the Vidisha region.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>26 Jul 2026</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Library Conference Hall</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Event 3 -->
+          <div class="event-card-v2" data-type="meetup" data-time="upcoming" data-name="wiki loves monuments briefing" data-location="open auditorium">
+            <div class="event-v2-body">
+              <div class="event-status-pill upcoming">UPCOMING</div>
+              <span class="event-v2-badge">MEETUP</span>
+              <h3 class="event-v2-title">Wiki Loves Monuments Briefing</h3>
+              <p class="event-v2-desc">Orientation for the annual global photography contest with editing guidelines, uploads, and CC licensing tips.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>9 Aug 2026</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Open Auditorium</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Event 1 -->
+          <div class="event-card-v2" data-type="workshop" data-time="past" data-name="wlf orientation and workshop 2025" data-location="sati campus">
+            <div class="event-v2-body">
+              <div class="event-status-pill past">PAST</div>
+              <span class="event-v2-badge">WORKSHOP</span>
+              <h3 class="event-v2-title">WLF 2025 Orientation</h3>
+              <p class="event-v2-desc">A special orientation and workshop session for female students at SATI Campus, promoting gender gap bridging on Wikipedia.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Feb 2025</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>SATI Campus</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Event 2 -->
+          <div class="event-card-v2" data-type="meetup" data-time="past" data-name="core team meet with director y. k. jain" data-location="director's office">
+            <div class="event-v2-body">
+              <div class="event-status-pill past">PAST</div>
+              <span class="event-v2-badge">MEETUP</span>
+              <h3 class="event-v2-title">Director Meetup</h3>
+              <p class="event-v2-desc">Core team members briefing and review session with Director Y. K. Jain regarding student community achievements and regional scope.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Dec 2024</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Director's Office</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Event 3 -->
+          <div class="event-card-v2" data-type="workshop" data-time="past" data-name="introduction to wikipedia editing" data-location="sati central it lab">
+            <div class="event-v2-body">
+              <div class="event-status-pill past">PAST</div>
+              <span class="event-v2-badge">WORKSHOP</span>
+              <h3 class="event-v2-title">Wikipedia Editor Training</h3>
+              <p class="event-v2-desc">Onboarding workshop for first-year volunteers on core content policies, sandbox testing, and citation formatting.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Sep 2024</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>SATI Central IT Lab</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Event 4 -->
+          <div class="event-card-v2" data-type="photo-walk" data-time="past" data-name="vidisha photo walk & commons upload" data-location="udayagiri caves & heliodorus pillar">
+            <div class="event-v2-body">
+              <div class="event-status-pill past">PAST</div>
+              <span class="event-v2-badge">PHOTO WALK</span>
+              <h3 class="event-v2-title">Vidisha Photo Walk</h3>
+              <p class="event-v2-desc">A field photography excursion cataloging archaeological monuments of Vidisha and uploading them to Wikimedia Commons.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Oct 2024</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Vidisha Sites</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Community CTA Section -->
+    <section class="join-section" id="join-section">
+      <div class="container">
+        <div class="join-banner-blue fade-in-up">
+          <div class="join-content">
+            <h2 class="join-title-white">Ready to edit history?</h2>
+            <p class="join-text-white">Whether you want to write articles, upload photographs of local culture, code semantic queries, or help with event design—there's a place for you in our community!</p>
+            <div class="join-buttons">
+              <button class="btn btn-white btn-join-trigger">Become a Member</button>
+              <a href="https://meta.wikimedia.org/wiki/Wiki_Club_SATI" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Meta-Wiki Page</a>
+            </div>
+          </div>
+          <div class="join-illustration">
+            <!-- Thin Central Plus-Sign Orbit Graphic -->
+            <svg class="illustration-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Central thin plus sign (stationary) -->
+              <line x1="88" y1="100" x2="112" y2="100" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="100" y1="88" x2="100" y2="112" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              
+              <!-- Orbit circles and nodes (rotating) -->
+              <g class="spin-slow">
+                <!-- Inner dashed orbit -->
+                <circle cx="100" cy="100" r="45" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="5 5" />
+                <!-- Outer solid orbit -->
+                <circle cx="100" cy="100" r="65" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                
+                <!-- Orbiting Nodes -->
+                <!-- Top-Left node on dashed circle -->
+                <circle cx="68" cy="68" r="11" fill="#FFFFFF" fill-opacity="0.95" />
+                <!-- Bottom-Right node on dashed circle -->
+                <circle cx="132" cy="132" r="9" fill="#FFFFFF" fill-opacity="0.5" />
+                <!-- Left node on solid outer circle -->
+                <circle cx="35" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.7" />
+                <!-- Right node on solid outer circle -->
+                <circle cx="165" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-wiki-dark">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="index.html" class="footer-logo">
+          <!-- Blue Square Logo Mark as in the screenshot -->
+          <img id="footer-logo" src="logo-dark.svg" alt="Wiki Club SATI Logo" class="footer-logo-img" width="36" height="36" style="flex-shrink:0;">
+          <span style="margin-left: 10px;">Wiki Club SATI</span>
+        </a>
+        <p class="footer-desc">A student-led Wikimedia community at Samrat Ashok Technological Institute, Vidisha — dedicated to open knowledge, digital literacy, and free culture.</p>
+        <div class="footer-socials">
+          <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wiki-club-sat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Movement</h4>
+        <ul class="footer-links">
+          <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+          <li><a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
+          <li><a href="https://wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a></li>
+          <li><a href="https://meta.wikimedia.org" target="_blank" rel="noopener noreferrer">Meta-Wiki</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Wiki Club SATI, Vidisha. Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA 4.0</a>.</p>
+      <p>Built with passion for open knowledge.</p>
+    </div>
+  </footer>
+
+  <!-- Join Community Modal -->
+  <div class="modal-overlay" id="join-modal">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Join Wiki Club SATI</h3>
+        <p class="modal-subtitle">Register your interest to get invitations to our workshops, editing drives, and group communications.</p>
+      </div>
+      <div class="modal-body">
+        <form id="join-form">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" required placeholder="e.g. Aman Sharma">
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input type="email" id="student-email" required placeholder="e.g. student@satiengg.in">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-branch">Branch / Department</label>
+              <select id="student-branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CE">Civil Engineering</option>
+                <option value="EI">Electronics & Instrumentation</option>
+                <option value="other">Other / Applied Sciences</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="student-year">Year of Study</label>
+              <select id="student-year" required>
+                <option value="" disabled selected>Select year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Areas of Interest (Select multiple)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikipedia"> Wikipedia Editing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="commons"> Wikimedia Commons
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikidata"> Wikidata & Semantic Web
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="tech"> Tool Dev & Scripts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="outreach"> Outreach & Socials
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+
+        <!-- Success Message (hidden initially) -->
+        <div class="success-message" id="success-message" style="display: none;">
+          <div class="success-icon-wrap">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Application Received!</h4>
+          <p>Thank you for showing interest in Wiki Club SATI. To get connected immediately with our team and receive updates, please join our official communication channels:</p>
+          <div class="social-join-cards">
+            <a href="#" class="social-join-card whatsapp">
+               <span class="social-join-title">Join WhatsApp Group</span>
+               <span class="social-join-desc">Direct communications & links</span>
+            </a>
+            <a href="#" class="social-join-card discord">
+               <span class="social-join-title">Join Discord Server</span>
+               <span class="social-join-desc">Collaborative channels & coding chat</span>
+            </a>
+          </div>
+          <button class="btn btn-secondary btn-block" id="success-close">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script src="script.js"></script>
+</body>
+</html>

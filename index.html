@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiki Club SATI | Wikimedia Student Community</title>
+  <meta name="description" content="Official website of Wiki Club SATI (Samrat Ashok Technological Institute, Vidisha). Empowering students through Wikipedia editing, Wikidata, Wikimedia Commons, and open knowledge.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <!-- Wiki Logo Mark - Dot Cloud Logo representing Wiki Club SATI -->
+        <img id="navbar-logo" src="logo.svg" alt="Wiki Club SATI Logo" class="brand-logo" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-title">Wiki Club SATI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="members.html" class="nav-link">Members</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-join-trigger">Join Community</button>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="members.html" class="mobile-nav-link">Members</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="resources.html" class="mobile-nav-link">Resources</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="#join-section" class="mobile-nav-link btn-join-trigger">Join Community</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+      </div>
+      <div class="container hero-container-centered">
+        <div class="hero-content-centered fade-in-up">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">OPEN KNOWLEDGE MOVEMENT</span>
+          </div>
+          <h1 class="hero-title">
+            Learn, Contribute, <span class="highlight-text">Impact.</span>
+          </h1>
+          <p class="hero-description-centered">
+            Empowering students of Samrat Ashok Technological Institute to document history, curate science, and bridge the digital literacy gap through the global Wikimedia ecosystem.
+          </p>
+          <div class="hero-actions-centered">
+            <button class="btn btn-primary-dark btn-join-trigger">Join Community</button>
+            <a href="events.html" class="btn btn-secondary-white">Explore Events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item fade-in-up">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="152">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Active Members</p>
+          </div>
+          
+          <div class="stat-item fade-in-up delay-1">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="5.2" data-decimals="1">0</span><span class="stat-suffix">k</span>
+            </div>
+            <p class="stat-label">Total Edits</p>
+          </div>
+          
+          <div class="stat-item fade-in-up delay-2">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="24">0</span>
+            </div>
+            <p class="stat-label">Events Conducted</p>
+          </div>
+          
+          <div class="stat-item fade-in-up delay-3">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="487">0</span>
+            </div>
+            <p class="stat-label">Articles & Uploads</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars / About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Our Pillars of Open Knowledge</h2>
+          <p class="section-subtitle">We organize workshops, editing drives, and collaborative events centered around the core projects of the Wikimedia movement.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card fade-in-up">
+            <div class="pillar-icon wikipedia">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Wikipedia Editing</h3>
+            <p class="pillar-text">Contributing accurate, sourced articles to the world's largest online encyclopedia. We focus on bridging content gaps and documenting local history and science.</p>
+            <ul class="pillar-features">
+              <li>Local History Archiving</li>
+              <li>Sourcing & Citations Workshops</li>
+              <li>Gender Gap Editing Campaigns</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card fade-in-up delay-1">
+            <div class="pillar-icon commons">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Wikimedia Commons</h3>
+            <p class="pillar-text">Uploading high-quality, free-to-use images, videos, and media files to enrich articles. We catalog our city's heritage and architectural wonders.</p>
+            <ul class="pillar-features">
+              <li>Vidisha Photo Walks</li>
+              <li>Creative Commons Licensing</li>
+              <li>Media Categorization</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card fade-in-up delay-2">
+            <div class="pillar-icon wikidata">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Wikidata & Open Data</h3>
+            <p class="pillar-text">Structuring open data so machines and humans can easily query and analyze it. We build databases that link Vidisha and SATI to global semantic nodes.</p>
+            <ul class="pillar-features">
+              <li>Semantic Data Queries</li>
+              <li>SPARQL Query Training</li>
+              <li>Academic Data Structuring</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card fade-in-up delay-3">
+            <div class="pillar-icon literacy">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Digital Literacy</h3>
+            <p class="pillar-text">Fostering critical thinking, information evaluation, copyright awareness, and collaborative research tools among students at SATI.</p>
+            <ul class="pillar-features">
+              <li>Fact-Checking Workshops</li>
+              <li>Intellectual Property Education</li>
+              <li>Research Methodologies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Contributors Section -->
+    <section class="contributors-section" id="contributors">
+      <div class="container">
+        <div class="section-header-row fade-in-up">
+          <div class="section-title-wrap">
+            <h2 class="section-title-left">Featured Contributors</h2>
+            <p class="section-subtitle-left">Meet the top editors shaping the future of digital knowledge.</p>
+          </div>
+          <a href="members.html" class="section-header-link">View all members &rarr;</a>
+        </div>
+
+        <div class="contributors-grid-three">
+          <!-- Contributor 1 -->
+          <div class="contributor-card fade-in-up">
+            <div class="contributor-card-header">
+              <div class="contributor-avatar blue">AS</div>
+              <div class="contributor-name-wrap">
+                <h3 class="contributor-name-text">Aditi Sharma</h3>
+                <span class="contributor-username">@Aditi_SATI</span>
+              </div>
+            </div>
+            <div class="contributor-badges">
+              <span class="contributor-badge">Editor of the Month</span>
+              <span class="contributor-badge">Admin</span>
+            </div>
+            <div class="contributor-card-footer">
+              <div class="footer-stat">
+                <span class="lbl">EDITS</span>
+                <span class="val">1,420</span>
+              </div>
+              <div class="footer-stat right-aligned">
+                <span class="lbl">JOINED</span>
+                <span class="val">Aug 2022</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contributor 2 -->
+          <div class="contributor-card fade-in-up delay-1">
+            <div class="contributor-card-header">
+              <div class="contributor-avatar green">RV</div>
+              <div class="contributor-name-wrap">
+                <h3 class="contributor-name-text">Rahul Verma</h3>
+                <span class="contributor-username">@Rahul_Wikidata</span>
+              </div>
+            </div>
+            <div class="contributor-badges">
+              <span class="contributor-badge">Wikidata Expert</span>
+            </div>
+            <div class="contributor-card-footer">
+              <div class="footer-stat">
+                <span class="lbl">EDITS</span>
+                <span class="val">892</span>
+              </div>
+              <div class="footer-stat right-aligned">
+                <span class="lbl">JOINED</span>
+                <span class="val">Jan 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contributor 3 -->
+          <div class="contributor-card fade-in-up delay-2">
+            <div class="contributor-card-header">
+              <div class="contributor-avatar purple">AG</div>
+              <div class="contributor-name-wrap">
+                <h3 class="contributor-name-text">Aman Gupta</h3>
+                <span class="contributor-username">@Aman_Commons</span>
+              </div>
+            </div>
+            <div class="contributor-badges">
+              <span class="contributor-badge">Core Team</span>
+              <span class="contributor-badge">Moderator</span>
+            </div>
+            <div class="contributor-card-footer">
+              <div class="footer-stat">
+                <span class="lbl">EDITS</span>
+                <span class="val">2,105</span>
+              </div>
+              <div class="footer-stat right-aligned">
+                <span class="lbl">JOINED</span>
+                <span class="val">Oct 2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section" id="events">
+      <div class="container">
+        <div class="section-header-row fade-in-up">
+          <div class="section-title-wrap">
+            <h2 class="section-title-left">Upcoming Events</h2>
+            <p class="section-subtitle-left">Workshops, edit-a-thons, and meetups — open to all SATI students.</p>
+          </div>
+          <a href="events.html" class="section-header-link">Full calendar &rarr;</a>
+        </div>
+
+        <div class="events-grid-three">
+          <!-- Event 1 -->
+          <div class="event-card-v2 fade-in-up">
+            <div class="event-v2-body">
+              <span class="event-v2-badge">WORKSHOP</span>
+              <h3 class="event-v2-title">Introduction to Wikidata</h3>
+              <p class="event-v2-desc">Hands-on session on structured data, SPARQL queries, and linking items to Wikipedia articles.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>12 Jul 2026</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>SATI Central IT Lab, Block A</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="event-card-v2 fade-in-up delay-1">
+            <div class="event-v2-body">
+              <span class="event-v2-badge">EDIT-A-THON</span>
+              <h3 class="event-v2-title">Vidisha Heritage Edit-a-thon</h3>
+              <p class="event-v2-desc">Improving Wikipedia coverage of monuments, history, and culture of the Vidisha region.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>26 Jul 2026</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Library Conference Hall</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event-card-v2 fade-in-up delay-2">
+            <div class="event-v2-body">
+              <span class="event-v2-badge">MEETUP</span>
+              <h3 class="event-v2-title">Wiki Loves Monuments Briefing</h3>
+              <p class="event-v2-desc">Kickoff for the annual photography contest with tips on licensing and image quality.</p>
+            </div>
+            <div class="event-v2-footer">
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>9 Aug 2026</span>
+              </div>
+              <div class="event-v2-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Open Auditorium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">What our members say</h2>
+        </div>
+
+        <div class="testimonials-grid-three fade-in-up">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card-v2">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text-v2">Wiki Club SATI changed how I see the internet. I'm no longer just a consumer — I curate truth.</p>
+            <div class="testimonial-author-v2">
+              <div class="author-avatar blue">AS</div>
+              <div class="author-details">
+                <h4 class="author-name">Aditya Sharma</h4>
+                <p class="author-desc">Final Year, CSE</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card-v2 fade-in-up delay-1">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text-v2">Contributing to Commons taught me more about copyright and photography than any textbook.</p>
+            <div class="testimonial-author-v2">
+              <div class="author-avatar green">PS</div>
+              <div class="author-details">
+                <h4 class="author-name">Priya Singh</h4>
+                <p class="author-desc">Third Year, IT</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card-v2 fade-in-up delay-2">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-text-v2">The mentorship here is real. Within a month I had my first 100 edits on Wikipedia.</p>
+            <div class="testimonial-author-v2">
+              <div class="author-avatar purple">DY</div>
+              <div class="author-details">
+                <h4 class="author-name">Devansh Yadav</h4>
+                <p class="author-desc">Second Year, ECE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+      <div class="container">
+        <div class="section-header-row fade-in-up">
+          <div class="section-title-wrap">
+            <h2 class="section-title-left">Learning Resources</h2>
+            <p class="section-subtitle-left">Guides, tutorials, and training materials to help you contribute to the Wikimedia ecosystem.</p>
+          </div>
+          <a href="resources.html" class="section-header-link">All guides &rarr;</a>
+        </div>
+
+        <div class="resources-grid">
+          <!-- Resource 1 -->
+          <div class="resource-card fade-in-up">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="resource-title">Wikipedia Editing Guide</h3>
+            <p class="resource-desc">A comprehensive handbook on creating pages, writing articles neutral in point of view, and adding formatting, references, and citations.</p>
+            <a href="https://en.wikipedia.org/wiki/Help:Introduction_to_Wikipedia" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Read Guide</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Resource 2 -->
+          <div class="resource-card fade-in-up delay-1">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="resource-title">Introduction to Wikidata</h3>
+            <p class="resource-desc">Explore the structured web of data. Learn how to edit items, query properties using SPARQL, and use Wikipedia templates with Wikidata.</p>
+            <a href="https://www.wikidata.org/wiki/Wikidata:Introduction" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>View Tutorial</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Resource 3 -->
+          <div class="resource-card fade-in-up delay-2">
+            <div class="resource-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="resource-title">Wikimedia Commons Uploads</h3>
+            <p class="resource-desc">Guidelines for uploading high-quality images, illustrations, and audio. Understand licensing models (Creative Commons) and tagging.</p>
+            <a href="https://commons.wikimedia.org/wiki/Commons:First_steps" target="_blank" rel="noopener noreferrer" class="resource-link">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left side: contact info -->
+          <div class="contact-info-card fade-in-up">
+            <h2 class="contact-info-title">Get in touch</h2>
+            <p class="contact-info-text">Have questions about our events, edit-a-thons, or open knowledge? Interested in collaboration? Feel free to reach out to us!</p>
+            
+            <div class="contact-methods">
+              <!-- Email method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Email Address</span>
+                  <a href="mailto:wikiclubsati@gmail.com" class="contact-method-value">wikiclubsati@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Instagram method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Instagram</span>
+                  <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" class="contact-method-value">@wikiclubsati</a>
+                </div>
+              </div>
+
+              <!-- Twitter method -->
+              <div class="contact-method-item">
+                <div class="contact-method-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                  </svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Twitter / X</span>
+                  <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" class="contact-method-value">@wikiclubsati</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: message form -->
+          <div class="contact-form-card fade-in-up delay-1">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" required placeholder="Your email address">
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="5" required placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Community CTA Section -->
+    <section class="join-section" id="join-section">
+      <div class="container">
+        <div class="join-banner-blue fade-in-up">
+          <div class="join-content">
+            <h2 class="join-title-white">Ready to edit history?</h2>
+            <p class="join-text-white">Whether you want to write articles, upload photographs of local culture, code semantic queries, or help with event design—there's a place for you in our community!</p>
+            <div class="join-buttons">
+              <button class="btn btn-white btn-join-trigger">Become a Member</button>
+              <a href="https://meta.wikimedia.org/wiki/Wiki_Club_SATI" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Meta-Wiki Page</a>
+            </div>
+          </div>
+          <div class="join-illustration">
+            <!-- Thin Central Plus-Sign Orbit Graphic -->
+            <svg class="illustration-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Central thin plus sign (stationary) -->
+              <line x1="88" y1="100" x2="112" y2="100" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="100" y1="88" x2="100" y2="112" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              
+              <!-- Orbit circles and nodes (rotating) -->
+              <g class="spin-slow">
+                <!-- Inner dashed orbit -->
+                <circle cx="100" cy="100" r="45" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="5 5" />
+                <!-- Outer solid orbit -->
+                <circle cx="100" cy="100" r="65" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                
+                <!-- Orbiting Nodes -->
+                <!-- Top-Left node on dashed circle -->
+                <circle cx="68" cy="68" r="11" fill="#FFFFFF" fill-opacity="0.95" />
+                <!-- Bottom-Right node on dashed circle -->
+                <circle cx="132" cy="132" r="9" fill="#FFFFFF" fill-opacity="0.5" />
+                <!-- Left node on solid outer circle -->
+                <circle cx="35" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.7" />
+                <!-- Right node on solid outer circle -->
+                <circle cx="165" cy="100" r="6.5" fill="#FFFFFF" fill-opacity="0.6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-wiki-dark">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="#" class="footer-logo">
+          <!-- Blue Square Logo Mark as in the screenshot -->
+          <img id="footer-logo" src="logo-dark.svg" alt="Wiki Club SATI Logo" class="footer-logo-img" width="36" height="36" style="flex-shrink:0;">
+          <span style="margin-left: 10px;">Wiki Club SATI</span>
+        </a>
+        <p class="footer-desc">A student-led Wikimedia community at Samrat Ashok Technological Institute, Vidisha — dedicated to open knowledge, digital literacy, and free culture.</p>
+        <div class="footer-socials">
+          <a href="https://x.com/wikiclubsati" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wikiclubsati/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wiki-club-sat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4 class="footer-title">Movement</h4>
+        <ul class="footer-links">
+          <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+          <li><a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></li>
+          <li><a href="https://wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a></li>
+          <li><a href="https://meta.wikimedia.org" target="_blank" rel="noopener noreferrer">Meta-Wiki</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Wiki Club SATI, Vidisha. Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-SA 4.0</a>.</p>
+      <p>Built with passion for open knowledge.</p>
+    </div>
+  </footer>
+
+  <!-- Join Community Modal -->
+  <div class="modal-overlay" id="join-modal">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Join Wiki Club SATI</h3>
+        <p class="modal-subtitle">Register your interest to get invitations to our workshops, editing drives, and group communications.</p>
+      </div>
+      <div class="modal-body">
+        <form id="join-form">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" required placeholder="e.g. Aman Sharma">
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input type="email" id="student-email" required placeholder="e.g. student@satiengg.in">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-branch">Branch / Department</label>
+              <select id="student-branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="CE">Civil Engineering</option>
+                <option value="EI">Electronics & Instrumentation</option>
+                <option value="other">Other / Applied Sciences</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="student-year">Year of Study</label>
+              <select id="student-year" required>
+                <option value="" disabled selected>Select year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Areas of Interest (Select multiple)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikipedia"> Wikipedia Editing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="commons"> Wikimedia Commons
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="wikidata"> Wikidata & Semantic Web
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="tech"> Tool Dev & Scripts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest" value="outreach"> Outreach & Socials
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+
+        <!-- Success Message (hidden initially) -->
+        <div class="success-message" id="success-message" style="display: none;">
+          <div class="success-icon-wrap">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Application Received!</h4>
+          <p>Thank you for showing interest in Wiki Club SATI. To get connected immediately with our team and receive updates, please join our official communication channels:</p>
+          <div class="social-join-cards">
+            <a href="#" class="social-join-card whatsapp">
+              <span class="social-join-title">Join WhatsApp Group</span>
+              <span class="social-join-desc">Direct communications & links</span>
+            </a>
+            <a href="#" class="social-join-card discord">
+              <span class="social-join-title">Join Discord Server</span>
+              <span class="social-join-desc">Collaborative channels & coding chat</span>
+            </a>
+          </div>
+          <button class="btn btn-secondary btn-block" id="success-close">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script src="script.js"></script>
+</body>
+</html>

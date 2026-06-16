@@ -82,8 +82,7 @@ vec4 frag(vec2 pos, vec2 uv, vec4 color, sampler2D tex) {
             </div>
           </div>
           <p style="line-height: 1.6; color: var(--text-color); font-size: 0.95rem; margin-bottom: 16px;">${n}</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 24px 0;">
             <div>
               <h4 style="color: var(--color-secondary); font-family: var(--font-retro); font-size: 0.7rem; margin-bottom: 12px; text-transform: uppercase;">👥 User Groups</h4>
               <div class="skills-list">

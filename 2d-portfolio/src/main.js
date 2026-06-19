@@ -248,9 +248,13 @@ k.scene("main", async () => {
     player.isMovingState = false;
     stopPlayerAnims();
     
+    // Reset mobile joystick states immediately when opening modal
+    mobileControls.reset();
+    
     modals.open(activeBoundary, () => {
       // Callback triggered when modal closes
       player.isInDialogue = false;
+      mobileControls.reset(); // Reset again just in case
       // If player is still colliding with the zone after closing, show prompt again
       if (activeBoundary) {
         showPrompt(activeBoundary);
@@ -362,6 +366,13 @@ k.scene("main", async () => {
     if (mobileControls.consumeInteractTap() && activeBoundary && !player.isInDialogue) {
       triggerInteraction();
     }
+  });
+
+  // Handle window blur to prevent stuck keyboard/touch movement
+  window.addEventListener("blur", () => {
+    player.isMovingState = false;
+    stopPlayerAnims();
+    mobileControls.reset();
   });
 });
 

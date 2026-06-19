@@ -48,6 +48,7 @@ class MobileControlsManager {
     this.container.addEventListener("touchstart", (e) => this.onTouchStart(e), { passive: false });
     window.addEventListener("touchmove", (e) => this.onTouchMove(e), { passive: false });
     window.addEventListener("touchend", (e) => this.onTouchEnd(e), { passive: false });
+    window.addEventListener("touchcancel", (e) => this.onTouchEnd(e), { passive: false });
     
     // Mobile Interact Button Event Listener
     if (this.interactBtn) {
@@ -110,20 +111,29 @@ class MobileControlsManager {
       }
     }
     
-    if (touchEnded) {
-      this.touchId = null;
-      this.isMoving = false;
-      this.vector = { x: 0, y: 0 };
-      
-      // Reset handle to center
-      this.handle.style.transform = `translate(0px, 0px)`;
-      
-      // Reset directions
-      this.directions.up = false;
-      this.directions.down = false;
-      this.directions.left = false;
-      this.directions.right = false;
+    // Safety check: if there are no active touches left on screen, force stop
+    if (e.touches.length === 0) {
+      touchEnded = true;
     }
+    
+    if (touchEnded) {
+      this.reset();
+    }
+  }
+
+  reset() {
+    this.touchId = null;
+    this.isMoving = false;
+    this.vector = { x: 0, y: 0 };
+    
+    if (this.handle) {
+      this.handle.style.transform = `translate(0px, 0px)`;
+    }
+    
+    this.directions.up = false;
+    this.directions.down = false;
+    this.directions.left = false;
+    this.directions.right = false;
   }
 
   processTouch(touch) {

@@ -8,6 +8,7 @@ class ModalController {
     this.closeBtn = null;
     this.isOpen = false;
     this.onCloseCallback = null;
+    this.typewriterTimeouts = [];
   }
 
   init() {
@@ -45,6 +46,12 @@ class ModalController {
     this.isOpen = true;
     this.onCloseCallback = onCloseCallback;
     
+    // Clear any active typewriter animations
+    if (this.typewriterTimeouts) {
+      this.typewriterTimeouts.forEach(clearTimeout);
+    }
+    this.typewriterTimeouts = [];
+    
     // Generate and inject content based on the active zone
     const contentHtml = this.generateContent(zoneName);
     this.modalBody.innerHTML = contentHtml;
@@ -54,6 +61,11 @@ class ModalController {
     setTimeout(() => {
       this.overlay.classList.add("active");
     }, 10);
+
+    // Trigger typewriter effect
+    setTimeout(() => {
+      this.applyTypewriterEffect();
+    }, 100);
     
     // Auto-focus close button
     if (this.closeBtn) {
@@ -66,6 +78,12 @@ class ModalController {
     
     sounds.playClose();
     this.isOpen = false;
+    
+    // Clear typewriter animations
+    if (this.typewriterTimeouts) {
+      this.typewriterTimeouts.forEach(clearTimeout);
+      this.typewriterTimeouts = [];
+    }
     
     this.overlay.classList.remove("active");
     
@@ -85,6 +103,76 @@ class ModalController {
         this.onCloseCallback = null;
       }
     }, 300);
+  }
+
+  applyTypewriterEffect() {
+    const targets = this.modalBody.querySelectorAll(
+      ".bio-desc, .project-desc, .timeline-desc, .npc-text p, .wikimedia-section p, .retro-card p, .retro-card li, .contact-lead, .modal-section p"
+    );
+
+    targets.forEach((el) => {
+      if (el.textContent.trim() === "") return;
+      
+      const trimmedText = el.textContent.trim();
+      if (trimmedText.length <= 2) return;
+
+      this.typeHTML(el, 8);
+    });
+  }
+
+  typeHTML(element, speed = 8) {
+    const html = element.innerHTML;
+    element.innerHTML = "";
+    
+    const tokens = [];
+    let i = 0;
+    while (i < html.length) {
+      if (html[i] === '<') {
+        let end = html.indexOf('>', i);
+        if (end !== -1) {
+          tokens.push({ type: 'tag', value: html.substring(i, end + 1) });
+          i = end + 1;
+        } else {
+          tokens.push({ type: 'text', value: html[i] });
+          i++;
+        }
+      } else if (html[i] === '&') {
+        let end = html.indexOf(';', i);
+        if (end !== -1 && end - i < 10) {
+          tokens.push({ type: 'text', value: html.substring(i, end + 1) });
+          i = end + 1;
+        } else {
+          tokens.push({ type: 'text', value: html[i] });
+          i++;
+        }
+      } else {
+        tokens.push({ type: 'text', value: html[i] });
+        i++;
+      }
+    }
+
+    let tokenIndex = 0;
+    let currentHTML = "";
+
+    const typeNext = () => {
+      if (tokenIndex >= tokens.length) return;
+
+      const token = tokens[tokenIndex];
+      if (token.type === 'tag') {
+        currentHTML += token.value;
+        element.innerHTML = currentHTML;
+        tokenIndex++;
+        typeNext();
+      } else {
+        currentHTML += token.value;
+        element.innerHTML = currentHTML;
+        tokenIndex++;
+        const timeoutId = setTimeout(typeNext, speed);
+        this.typewriterTimeouts.push(timeoutId);
+      }
+    };
+
+    typeNext();
   }
 
   generateContent(zoneName) {

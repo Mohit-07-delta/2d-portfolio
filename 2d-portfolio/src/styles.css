@@ -381,6 +381,8 @@ canvas:focus {
   width: 130px;
   height: 130px;
   border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .bio-name {

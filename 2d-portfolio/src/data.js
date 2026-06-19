@@ -2,7 +2,7 @@ export const portfolioData = {
   bio: {
     name: "Mohit Agre",
     title: "AI & Data Science Student & Open Knowledge Advocate",
-    avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=Mohit", // Pixel art style avatar URL
+    avatar: "assets/profile.jpg", // Path to your profile picture
     description: "Hi! I am Mohit Agre, a B.Tech Artificial Intelligence & Data Science student at SATI Vidisha and an active Wikimedia contributor. I love building interactive web projects, organizing open-knowledge communities, and documenting cultural heritage.",
     resumeLink: "#",
     resumeFileName: "Mohit_Agre_Resume.pdf"
